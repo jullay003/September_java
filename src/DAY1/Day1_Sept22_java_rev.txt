@@ -1,0 +1,64 @@
+Today — 5 Java Topics
+Java Variables & Data Types
+Primitives vs reference types
+Type inference
+Casting
+final
+Control Flow
+if / else
+switch
+for / while
+break / continue
+Methods
+Parameters and return values
+Method overloading
+static
+Scope
+Classes & Objects
+Fields
+Constructors
+Encapsulation
+this
+Object lifecycle
+Inheritance & Polymorphism
+extends
+Method overriding
+super
+Dynamic dispatch
+Composition vs inheritance
+
+
+1. Variables & Data Type:
+ Primiive types:
+  byte
+  short
+  int
+  long
+  float
+  double
+  char
+  boolean
+
+ Reference types:
+ String
+ Arrays
+ Objects
+ Classes
+
+  final int age = 25; age contains the actual primitive value.
+  final String name = "Luke"; name is a reference to a String object.
+
+  Type inference: var
+  userName -> String
+  age -> int
+  salary -> double
+  var is compile-time type inference. Java is still statically typed.
+
+  Casting:
+  int -> double is widening: int -> long -> float -> double
+  double -> int is narrowing and required explicit casting.
+
+  Overflow: Keep in mind the size and data types used, eg: multiply
+
+2. Primitive vs Reference Type:
+
