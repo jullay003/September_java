@@ -4,22 +4,29 @@ Primitives vs reference types
 Type inference
 Casting
 final
+
 Control Flow
 if / else
 switch
 for / while
 break / continue
+
+
 Methods
 Parameters and return values
 Method overloading
 static
 Scope
+
+
 Classes & Objects
 Fields
 Constructors
 Encapsulation
 this
 Object lifecycle
+
+
 Inheritance & Polymorphism
 extends
 Method overriding
@@ -61,4 +68,156 @@ Composition vs inheritance
   Overflow: Keep in mind the size and data types used, eg: multiply
 
 2. Primitive vs Reference Type:
+ prim : copy of the value. == : values are compared
+ refer: both holds a reference to the same object. == : Objects references are compared.
+
+if a.equals(b) == true
+then
+a.hashCode() == b.hashCode()
+
+pass by value: Java passes the value into method. The method changes its own copy.
+The reference itself is a passed by value, but the copied reference points to the same object
+So both can modify that same object.
+java is always pass by value. For objects, the value being passed is a copy of the reference.
+
+Primitive:
+== → compares values
+
+Reference:
+== → compares references
+      (same object or different object)
+
+hashCode():
+→ completely separate mechanism
+
+3. control flow:
+if else
+
+switch - the latest one
+final ReturnType result = switch(value) {
+     case value1 -> result1;
+     case value2 -> result2;
+     case value3 -> result3;
+     default -> defaultResult;
+};
+
+//Multiple statements:
+final String message = switch(role) {
+ case "ADMIN" -> {
+ System.out.println("Admin detected");
+ yield "Full access";
+}
+ case "USER" -> {
+ System.out.println("User detected");
+ yield "Limited access";
+ }
+ default -> "Unknown role";
+};   yield returns value from multi-statement case.
+
+ Loops:
+for(initialization; condition; update) {
+//code
+}
+
+for(final Type variable : collectionOnArray){
+//code
+}
+
+while: WHen number of iteration is not known upfront:
+while(condition) {
+//code
+}
+
+do While:
+returns the block at least once because the condition is checked afterward.
+while -> condition -> body
+do-while -> body -> condition
+
+break: immediately exits the loop
+continue: skips the current iteration and moves to the next one.
+
+3 topic: Method
+accessModifier returnType methodName(parameters) {
+return value;
+}
+
+method overloading:
+Same method name but different parameter list.
+java chooses method based on the arguments.
+add(int, int)
+add(int, int, int)
+add(double, double)
+--Only changing the return type is not enough.
+
+Static: member belong to the class, not a particular object.
+instance method.
+
+Scope:
+local -> only where it is declared can be accessed.
+block scope: if block for example.
+Instance field scope: for examoke in a class, where every object it belongs to.
+static field scope:  can be accessed by all objects of that class.
+
+Instance
+→ belongs to an object
+
+Static
+→ belongs to the class
+instance variable
+instance method
+instance of a class
+instance field
+instance initialization
+instanceof
+
+---User              → class / blueprint
+class User {
+    String name;
+}
+
+User firstUser = new User();
+User secondUser = new User();
+
+   firstUser         → instance of User
+   secondUser        → instance of User
+
+Class & objects:
+fields
+constructors - runs when you create an object with new.
+Constructor name = class name
+No return type
+Runs when object is created
+Can take parameters
+Can be overloaded
+
+Encapsulation: controlling access to an object's state instead of allowing anyone to modify it directly.
+private field
+     ↓
+controlled access
+     ↓
+getter / setter / domain method
+
+This -> refers to current object instance.
+this.name → field belonging to current object
+name      → constructor parameter
+
+Object lifecycle:
+new
+ ↓
+object created
+ ↓
+constructor runs
+ ↓
+object is used
+ ↓
+no reachable reference
+ ↓
+eligible for Garbage Collection
+
+topic 5:
+Inheritance : is-A
+Composition: has-A
+
+Dog is a animal.
+class Dog extends Animal
 

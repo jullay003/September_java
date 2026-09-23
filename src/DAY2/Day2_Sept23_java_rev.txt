@@ -1,0 +1,21 @@
+1. Abstraction:
+An abstract class gives you a common base + some behavior that children must implement
+A concrete class completes the missing behavior
+
+PECS:
+Producer extends
+Consumer super
+
+<? extends Payment>
+Payment <- CardPayment , both are acceptable
+List<Payment>
+List<CardPayment>
+because ? extends Payment
+Sometype that is Payment or a subclass of payment.
+? extends
+-> I mainly READ from this structure
+
+<? super Payment>
+This can accept List<Payment> , List<Object> because Payment can safely be inserted into either.
+? super
+-> I can WRITE Payment into itt.

@@ -1,3 +1,5 @@
+package DAY1;
+
 public class VariablesDT {
     public static void main(String[] args) {
         final int age = 25;
