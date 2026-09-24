@@ -1,0 +1,20 @@
+first & second -> "Java" in String Pool
+third -> another String object.
+String literals are stored in the String Pool.
+
+So, first == Second is true because both references point to the same pooled object.
+String is immutable. concat() creates a new String; it does not modify the original.
+
+String
+-> reference type
+-> immutable
+-> literals use String Pool
+
+Objects Methods:
+every java class ultimately inherits from object.
+we care about:
+equals()
+hashCode()
+toString()
+
+

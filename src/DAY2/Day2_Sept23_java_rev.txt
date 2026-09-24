@@ -18,4 +18,4 @@ Sometype that is Payment or a subclass of payment.
 <? super Payment>
 This can accept List<Payment> , List<Object> because Payment can safely be inserted into either.
 ? super
--> I can WRITE Payment into itt.
+-> I can WRITE Payment into it.
